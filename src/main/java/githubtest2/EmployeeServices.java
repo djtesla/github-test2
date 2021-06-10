@@ -11,4 +11,9 @@ public class EmployeeServices {
         employees.add(employee);
     }
 
+
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
 }
