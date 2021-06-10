@@ -3,6 +3,7 @@ package githubtest2;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EmployeeServices {
 
@@ -13,7 +14,7 @@ public class EmployeeServices {
     }
 
     public Employee findOldestEmployee() {
-        return employees.stream().sorted(Comparator.comparing(Employee::getYearOfBirth).reversed());
+        return employees.stream().sorted(Comparator.comparing(Employee::getYearOfBirth).reversed()).collect(Collectors.toList()).get(0);
     }
 
     public List<Employee> getEmployees() {
