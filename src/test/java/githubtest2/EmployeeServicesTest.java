@@ -13,7 +13,7 @@ class EmployeeServicesTest {
 // üres sorba írok próba
     @Test
     void testSaveEmployeeThenList() {
-        services.save(new Employee("John Doe", 1970, 200_000));
+        /* nem üres sorba írok próba */ services.save(new Employee("John Doe", 1970, 200_000));
         List<Employee> employees = services.getEmployees();
 
         assertEquals(1, employees.size());
