@@ -14,7 +14,7 @@ public class EmployeeServices {
     }
 
     public Employee findOldestEmployee() {
-        return employees.stream().sorted(Comparator.comparing(Employee::getYearOfBirth).reversed()).collect(Collectors.toList()).get(0);
+        return employees.stream().sorted(Comparator.comparing(Employee::getYearOfBirth)).collect(Collectors.toList()).get(0);
     }
 
     public List<Employee> findBySalaryLargerThan(int salary) {
