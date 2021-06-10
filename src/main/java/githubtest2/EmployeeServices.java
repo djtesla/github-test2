@@ -17,6 +17,10 @@ public class EmployeeServices {
         return employees.stream().sorted(Comparator.comparing(Employee::getYearOfBirth).reversed()).collect(Collectors.toList()).get(0);
     }
 
+    public List<Employee> findBySalaryLargerThan(int salary) {
+        return employees.stream().filter(e -> e.getSalary() > salary).collect(Collectors.toList());
+    }
+
     public List<Employee> getEmployees() {
         return new ArrayList<>(employees);
     }
