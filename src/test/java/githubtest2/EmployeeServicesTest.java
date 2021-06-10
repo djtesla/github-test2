@@ -26,7 +26,7 @@ class EmployeeServicesTest {
         services.save(new Employee("Jane Doe", 1980, 250_000));
         services.save(new Employee("Jack Doe", 1990, 180_000));
 
-        assertEquals("Jack Doe", services.findOldestEmployee());
+        assertEquals("Jane Doe", services.findOldestEmployee());
     }
 
     @Test
